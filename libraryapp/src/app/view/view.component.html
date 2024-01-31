@@ -1,0 +1,23 @@
+<h3 class="text-center my-4">Book Details</h3>
+<table class="table table-bordered">
+    <thead>
+    <tr><td>ID</td>
+        <td>TITLE</td>
+        <td>AUTHOR</td>
+        <td>PRICE</td>
+        <td>VIEW</td>
+        <td>EDIT</td>
+        <td>DELETE</td>
+    
+    </tr></thead>
+<tbody>
+        <tr *ngFor="let i of data">
+        <td>{{i.id}}</td>
+    <td>{{i.title}}</td>
+<td>{{i.author}}</td>
+<td>{{i.price}}</td>
+<td><button (click)="view(i.id)" class="btn btn-danger">View</button></td>
+        <td><button (click)="edit(i.id)" class="btn btn-danger">Edit</button></td>
+        <td><button (click)="delete(i.id)" class="btn btn-danger">Delete</button></td>
+</tr></tbody>
+</table>
